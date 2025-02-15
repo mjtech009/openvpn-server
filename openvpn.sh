@@ -17,7 +17,6 @@ get_domain "$@"
 # Install dependencies (if not already installed)
 if ! command -v certbot &> /dev/null; then
   echo "Installing openvpn....."
-  sudo bash <(curl -fsS https://packages.openvpn.net/as/install.sh) --yes
   echo "Installing certbot..."
   sudo apt-get update -y
   sudo apt-get install -y software-properties-common
